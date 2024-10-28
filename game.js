@@ -1,6 +1,7 @@
+//This function returns "rock", "paper", or "scissors" based on a random integer.
 function getComputerPick(){ 
-  
-    //Here it makes a variable where it makes a random number between 1 and 3
+    
+    //initialize with a random integer between 1 and 3.
     var computerChoice = Randomizer.nextInt(1,3)
     
     
@@ -11,6 +12,67 @@ function getComputerPick(){
     } else if (computerChoice == 3) {
         return "scissors";
     } else {
-        println("something is wrong please try again later")
+        println ("The computer is having trouble picking rock, paper, or scissors. Review your randomizer variable");
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//This function asks the user for a choice and returns that choice
+function getUserPick() { 
+   
+    //This loop will keep running until a valid choice is typed
+    while (true) {
+        var userChoice = readLine("Please pick 'rock', 'paper', or 'scissors': ");
+        println("");
+        
+        if ((userChoice == "rock") || (userChoice == "paper") || (userChoice == "scissors")) {
+            return userChoice;
+        } else {
+            println("Please type 'rock', 'paper', or 'scissors' only");
+        }
+    }
+}
+
+//This function inputs both the user and random computer choice and compares them
+//in order to determine the winner
+function playRockPaperScissors(user, computer) {
+
+    if ((user == "rock" && computer == "scissors") || (user == "scissors" && computer == "paper") || (user == "paper" && computer == "rock")) {
+        println("You picked "+user);
+        println("and the computer picked "+computer);
+        println("...YOU WIN! :D");
+    } else if (user == computer) {
+        println("You both picked "+user);
+        println("...YOU TIED");
+    } else {
+        println("You picked "+user);
+        println("and the computer picked "+computer);
+        println("...YOU LOSE! :(");
+    }
+}
+
+//calls the pick functions and plays the game!
+var userPick = getUserPick();
+var computerPick = getComputerPick();
+playRockPaperScissors(userPick, computerPick);
