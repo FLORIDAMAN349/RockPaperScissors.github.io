@@ -12,30 +12,9 @@ function getComputerPick(){
     } else if (computerChoice == 3) {
         return "scissors";
     } else {
-        println ("The computer is having trouble picking rock, paper, or scissors. Review your randomizer variable");
+        println ("Something is wrong please reload the page");
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 //This function asks the user for a choice and returns that choice
