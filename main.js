@@ -55,14 +55,14 @@ function playRockPaperScissors(user, computer) {
     if ((user == "rock" && computer == "scissors") || (user == "scissors" && computer == "paper") || (user == "paper" && computer == "rock")) {
         println("You picked "+user);
         println("and the computer picked "+computer);
-        println("...YOU WIN! :D");
+        alert("...YOU WIN! :D");
     } else if (user == computer) {
         println("You both picked "+user);
-        println("...YOU TIED");
+        alert("...YOU TIED");
     } else {
         println("You picked "+user);
         println("and the computer picked "+computer);
-        println("...YOU LOSE! :(");
+        alert("...YOU LOSE! :(");
     }
 }
 
