@@ -6,6 +6,14 @@ let rock.document.getElementById("rock");
 let paper.document.getElementById("paper");
 let scissor.document.getElementById("scissor");
 
+if(Rock) {
+        userchoice = "rock";
+    } else if (Paper) {
+        userChoice = "paper";
+    } else if (Scissor){
+        userChoice = "scissors";
+    }
+
 var userchoice;
 /*again.addEventListener("click", restart)
 document.addEventListener("click", start);*/
@@ -32,13 +40,7 @@ function getComputerPick(){
 function getUserPick() { 
    
     
-    if(rock) {
-        userchoice = "rock";
-    } else if (paper) {
-        userChoice = "paper";
-    } else if (scissor){
-        userChoice = "scissors";
-    }
+    
         
         if ((userChoice == "rock") || (userChoice == "paper") || (userChoice == "scissors")) {
             return userChoice;
@@ -69,4 +71,4 @@ function playRockPaperScissors(user, computer) {
 //calls the pick functions and plays the game!
 var userPick = getUserPick();
 var computerPick = getComputerPick();
-playRockPaperScissors(userPick, computerPick);
+
