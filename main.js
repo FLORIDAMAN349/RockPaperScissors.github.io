@@ -1,3 +1,14 @@
+rock.addEventListener("rock", Rock);
+paper.addEventListener("paper", Paper);
+scissor.addEventListener("scissor", Scissor);
+
+let rock.document.getElementById("rock");
+let paper.document.getElementById("paper");
+let scissor.document.getElementById("scissor");
+
+var userchoice;
+/*again.addEventListener("click", restart)
+document.addEventListener("click", start);*/
 //This function returns "rock", "paper", or "scissors" based on a random integer.
 function getComputerPick(){ 
     
@@ -20,10 +31,14 @@ function getComputerPick(){
 //This function asks the user for a choice and returns that choice
 function getUserPick() { 
    
-    //This loop will keep running until a valid choice is typed
-    while (true) {
-        var userChoice = readLine("Please pick 'rock', 'paper', or 'scissors': ");
-        println("");
+    
+    if(rock) {
+        userchoice = "rock";
+    } else if (paper) {
+        userChoice = "paper";
+    } else if (scissor){
+        userChoice = "scissors";
+    }
         
         if ((userChoice == "rock") || (userChoice == "paper") || (userChoice == "scissors")) {
             return userChoice;
