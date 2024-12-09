@@ -71,4 +71,4 @@ function playRockPaperScissors(user, computer) {
 //calls the pick functions and plays the game!
 var userPick = getUserPick();
 var computerPick = getComputerPick();
-
+playRockPaperScissors(userPick, computerPick);
