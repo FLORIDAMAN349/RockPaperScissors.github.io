@@ -38,17 +38,12 @@ function getComputerPick(){
 
 
 //This function asks the user for a choice and returns that choice
-function getUserPick() { 
-   
-    
-    
-        
-        if ((userChoice == "rock") || (userChoice == "paper") || (userChoice == "scissors")) {
-            return userChoice;
-        } else {
-            println("Please type 'rock', 'paper', or 'scissors' only");
+function getUserPick() {   
+if ((userChoice == "rock") || (userChoice == "paper") || (userChoice == "scissors")) {
+        return userChoice;
+} else {
+        println("Please type 'rock', 'paper', or 'scissors' only");
         }
-    }
 }
 
 //This function inputs both the user and random computer choice and compares them
