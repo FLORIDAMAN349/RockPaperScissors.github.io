@@ -1,10 +1,10 @@
-rock.addEventListener("rock", Rock);
-paper.addEventListener("paper", Paper);
-scissor.addEventListener("scissor", Scissor);
-
 let rock = document.getElementById("rock");
 let paper = document.getElementById("paper");
 let scissor = document.getElementById("scissor");
+
+rock.addEventListener("rock", rock);
+paper.addEventListener("paper", paper);
+scissor.addEventListener("scissor", scissor);
 
 var userchoice;
 
