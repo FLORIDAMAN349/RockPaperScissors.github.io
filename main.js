@@ -6,15 +6,16 @@ let rock = document.getElementById("rock");
 let paper = document.getElementById("paper");
 let scissor = document.getElementById("scissor");
 
-if(Rock) {
+var userchoice;
+
+if(rock) {
         userchoice = "rock";
-    } else if (Paper) {
+    } else if (paper) {
         userChoice = "paper";
-    } else if (Scissor){
+    } else if (scissor){
         userChoice = "scissors";
     }
 
-var userchoice;
 /*again.addEventListener("click", restart)
 document.addEventListener("click", start);*/
 //This function returns "rock", "paper", or "scissors" based on a random integer.
