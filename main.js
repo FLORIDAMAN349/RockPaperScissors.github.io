@@ -2,19 +2,26 @@ let rock = document.getElementById("rock");
 let paper = document.getElementById("paper");
 let scissor = document.getElementById("scissor");
 
-rock.addEventListener("rock", rock);
-paper.addEventListener("paper", paper);
-scissor.addEventListener("scissor", scissor);
+rock.addEventListener("click", rock);
+paper.addEventListener("click", paper);
+scissor.addEventListener("click", scissor);
 
-var userchoice;
+rock.addEventListener("click", getUserPick);
+paper.addEventListener("click", getUserPick);
+scissor.addEventListener("click", getUserPick);
 
-if(rock) {
-        userchoice = "rock";
-    } else if (paper) {
-        userChoice = "paper";
-    } else if (scissor){
-        userChoice = "scissors";
-    }
+var userChoice;
+
+function rock() {
+    userChoice = "rock";
+}
+function paper() {
+    userChoice = "paper";
+}
+function scissor() {
+    userChoice = "scissor";
+}
+
 
 /*again.addEventListener("click", restart)
 document.addEventListener("click", start);*/
@@ -22,9 +29,9 @@ document.addEventListener("click", start);*/
 function getComputerPick(){ 
     
     //initialize with a random integer between 1 and 3.
-    var computerChoice = Randomizer.nextInt(1,3)
+    var computerChoice = Math.floor(Math.random() * 3 ) + 1;
     
-    
+    console.log(computerChoice);
     if (computerChoice == 1) {
         return "rock";
     } else if (computerChoice == 2) {
@@ -32,7 +39,7 @@ function getComputerPick(){
     } else if (computerChoice == 3) {
         return "scissors";
     } else {
-        println ("Something is wrong please reload the page");
+        console.log("Something is wrong please reload the page");
     }
 }
 
@@ -41,9 +48,9 @@ function getComputerPick(){
 function getUserPick() {   
 if ((userChoice == "rock") || (userChoice == "paper") || (userChoice == "scissors")) {
         return userChoice;
-} else {
-        println("Please type 'rock', 'paper', or 'scissors' only");
-        }
+    } else {
+        console.log("Please type 'rock', 'paper', or 'scissors' only");
+    }
 }
 
 //This function inputs both the user and random computer choice and compares them
@@ -51,15 +58,15 @@ if ((userChoice == "rock") || (userChoice == "paper") || (userChoice == "scissor
 function playRockPaperScissors(user, computer) {
 
     if ((user == "rock" && computer == "scissors") || (user == "scissors" && computer == "paper") || (user == "paper" && computer == "rock")) {
-        println("You picked "+user);
-        println("and the computer picked "+computer);
+        console.log("You picked "+user);
+        console.log("and the computer picked "+computer);
         alert("...YOU WIN! :D");
     } else if (user == computer) {
-        println("You both picked "+user);
+        console.log("You both picked "+user);
         alert("...YOU TIED");
     } else {
-        println("You picked "+user);
-        println("and the computer picked "+computer);
+        console.log("You picked "+user);
+        console.log("and the computer picked "+computer);
         alert("...YOU LOSE! :(");
     }
 }
@@ -67,4 +74,3 @@ function playRockPaperScissors(user, computer) {
 //calls the pick functions and plays the game!
 var userPick = getUserPick();
 var computerPick = getComputerPick();
-playRockPaperScissors(userPick, computerPick);
